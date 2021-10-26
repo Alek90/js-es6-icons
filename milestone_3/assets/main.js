@@ -126,20 +126,85 @@ const icons = [
 
 // Mainston 2: aggiungiamo il valore relativo ad icon.type per sfruttarlo come selettore rapido.
 
-icons.forEach(icon => {
-    
-    console.log(icon)
+// Mainston 3:  aggiungiamo l'effetto al cambio di valore del select, che manda a schermo solo le icon con icon.type relativo (tutte per all).
 
-    let card = `
-        <div class="card">
-            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
-            <h5>${icon.name}</h5>
-        </div>
-    `
-    
-    console.log(card);
-    
-    //Mandiamo a schermo;
-    document.querySelector(".container").insertAdjacentHTML("beforeend", card);
-        
+let select = document.getElementById("filter");
+let container = document.querySelector(".container");
+
+// Dall'evento devono arrivare in stampa solo le card desiderate:
+select.addEventListener("change", function() {
+	
+	//Azzerare lo schermo...
+	container.innerHTML = "";
+
+	let filterSelected = select.value;
+
+	icons.forEach(icon => {
+
+		//Stabilire la regola secondo la quale verranno create le card:
+
+		if (icon.type == filterSelected) {
+			//Qui in relazione all'icon.type:
+			let card = `
+			<div class="card ${icon.type}">
+			<i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
+			<h5>${icon.name}</h5>
+			</div>
+			`
+			console.log(card);
+			
+			//Mandiamo a schermo;
+			container.insertAdjacentHTML("beforeend", card);
+		}else if (filterSelected == "all") {
+			//Qui creare card seguendo il ciclo:
+			let card = `
+			<div class="card ${icon.type}">
+			<i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
+			<h5>${icon.name}</h5>
+			</div>
+			`
+			console.log(card);
+			
+			//Mandiamo a schermo;
+			container.insertAdjacentHTML("beforeend", card);
+		}
+		
+	})
+
 })
+
+/* icons.forEach(icon => {
+	
+	let card = `
+	<div class="card ${icon.type}">
+	<i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
+	<h5>${icon.name}</h5>
+	</div>
+	`
+	
+	console.log(card);
+	
+	//Mandiamo a schermo;
+	container.insertAdjacentHTML("beforeend", card);
+	
+}) */
+
+
+/* select.addEventListener("change", function(){
+
+	let filterSelected = select.value;
+
+	let cards = []
+
+	console.log(cards);
+
+	//let selectedCard = document.querySelectorAll(".${filterSelected}")
+
+	//console.log(selectedCard);
+}) */
+
+
+/* let filterSelected = document.getElementById("filter").value;
+filterSelected.addE
+ */
+
