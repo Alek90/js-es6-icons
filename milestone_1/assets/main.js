@@ -103,3 +103,27 @@ const icons = [
 	}
 ];
 
+
+/*
+    name: 'cat',
+	prefix: 'fa-',
+	type: 'animal',
+	family: 'fas'
+*/
+
+icons.forEach(icon => {
+    
+    console.log(icon)
+    
+    let card = `
+        <div class="card">
+            <i class="${icon.family} ${icon.prefix, icon.name}"></i>
+            <h4>${icon.name}</h4>
+        </div>
+    `
+    
+    console.log(card);
+    
+    document.querySelector(".container").insertAdjacentHTML("beforebegin", card);
+        
+})
