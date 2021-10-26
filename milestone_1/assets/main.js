@@ -2,7 +2,7 @@
     Mandare a schermo tutti gli oggetti appartenenti ad icons in forma di icone come segnalato esternamente.
 */
 
-
+// Array di icone:
 
 const icons = [
 	{
@@ -103,7 +103,7 @@ const icons = [
 	}
 ];
 
-
+// Struttura per ogni oggetto (es.):
 /*
     name: 'cat',
 	prefix: 'fa-',
@@ -111,10 +111,14 @@ const icons = [
 	family: 'fas'
 */
 
+
+/* Utilizziamo un ciclo foreach per creare una card per ogni icon;
+    La card sarà strutturata utilizzando i valori di alcune proprietà relative ad ogni icon;
+*/
 icons.forEach(icon => {
     
     console.log(icon)
-    
+
     let card = `
         <div class="card">
             <i class="${icon.family} ${icon.prefix, icon.name}"></i>
@@ -124,6 +128,7 @@ icons.forEach(icon => {
     
     console.log(card);
     
+    //Mandiamo a schermo;
     document.querySelector(".container").insertAdjacentHTML("beforebegin", card);
         
 })
