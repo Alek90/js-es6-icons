@@ -173,38 +173,3 @@ select.addEventListener("change", function() {
 
 })
 
-/* icons.forEach(icon => {
-	
-	let card = `
-	<div class="card ${icon.type}">
-	<i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
-	<h5>${icon.name}</h5>
-	</div>
-	`
-	
-	console.log(card);
-	
-	//Mandiamo a schermo;
-	container.insertAdjacentHTML("beforeend", card);
-	
-}) */
-
-
-/* select.addEventListener("change", function(){
-
-	let filterSelected = select.value;
-
-	let cards = []
-
-	console.log(cards);
-
-	//let selectedCard = document.querySelectorAll(".${filterSelected}")
-
-	//console.log(selectedCard);
-}) */
-
-
-/* let filterSelected = document.getElementById("filter").value;
-filterSelected.addE
- */
-
