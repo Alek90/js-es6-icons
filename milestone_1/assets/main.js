@@ -121,7 +121,7 @@ icons.forEach(icon => {
 
     let card = `
         <div class="card">
-            <i class="${icon.family} ${icon.prefix, icon.name}"></i>
+            <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
             <h4>${icon.name}</h4>
         </div>
     `
@@ -129,6 +129,6 @@ icons.forEach(icon => {
     console.log(card);
     
     //Mandiamo a schermo;
-    document.querySelector(".container").insertAdjacentHTML("beforebegin", card);
+    document.querySelector(".container").insertAdjacentHTML("beforeend", card);
         
 })

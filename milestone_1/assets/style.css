@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    color: rgb(41, 177, 221);
+}
+
+nav{
+    background-color: rgb(41, 177, 221);
+}
+
+.container{
+    width: 100%;
+    background-color: rgb(221, 221, 221);
+}
