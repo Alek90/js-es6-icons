@@ -119,13 +119,16 @@ const icons = [
 /* Utilizziamo un ciclo foreach per creare una card per ogni icon;
     La card sarà strutturata utilizzando i valori di alcune proprietà relative ad ogni icon;
 */
+
+// Mainston 2: aggiungiamo il valore relativo ad icon.type per sfruttarlo come selettore rapido.
+
 icons.forEach(icon => {
     
     console.log(icon)
 
     let card = `
         <div class="card">
-            <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
+            <i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
             <h5>${icon.name}</h5>
         </div>
     `

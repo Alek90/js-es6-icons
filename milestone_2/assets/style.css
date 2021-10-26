@@ -64,3 +64,15 @@ h5{
     text-transform: uppercase;
     font-weight: 700;
 }
+
+.animal{
+    color: #0000ff;
+}
+
+.vegetable{
+    color: rgb(255, 165, 0);
+}
+
+.user{
+    color: rgb(128, 0, 128);
+}
