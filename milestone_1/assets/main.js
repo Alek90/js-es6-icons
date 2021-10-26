@@ -122,7 +122,7 @@ icons.forEach(icon => {
     let card = `
         <div class="card">
             <i class="${icon.family} ${icon.prefix}${icon.name}"></i>
-            <h4>${icon.name}</h4>
+            <h5>${icon.name}</h5>
         </div>
     `
     
