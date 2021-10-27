@@ -146,7 +146,7 @@ select.addEventListener("change", function() {
 		if (icon.type == filterSelected) {
 			//Qui in relazione all'icon.type:
 			let card = `
-			<div class="card ${icon.type}">
+			<div class="card ">
 			<i class="${icon.family} ${icon.prefix}${icon.name} ${icon.type}"></i>
 			<h5>${icon.name}</h5>
 			</div>
